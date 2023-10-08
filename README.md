@@ -1,3 +1,7 @@
+# Changes compared to fork
+
+Extract username from the certificate rather than the one given, except `username-as-common-name` as expected by the [manual](https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/).
+
 OpenVPN OTP Authentication support
 ==================================
 
