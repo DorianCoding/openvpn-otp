@@ -711,9 +711,9 @@ OPENVPN_EXPORT int
 openvpn_plugin_func_v1 (openvpn_plugin_handle_t handle, const int type, const char *argv[], const char *envp[])
 {
   /* get username/password from envp string array */
-  const char *username = get_env ("username", envp);
+  char *username = get_env ("username", envp);
   if (get_env ("common_name", envp) != NULL) {
-	  const char *username = get_env ("common_name", envp);
+	  username = get_env ("common_name", envp);
   }
   const char *password = get_env ("password", envp);
   const char *ip = get_env ("untrusted_ip", envp);
